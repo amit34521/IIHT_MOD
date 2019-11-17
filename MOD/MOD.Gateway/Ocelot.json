@@ -65,6 +65,33 @@
     },
     {
       "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Mentors/",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/Mentors/",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "ServiceName": "user-api",
+      "ReRoutesCaseSensitive": false
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Mentors/{catchAll}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/Mentors/{catchAll}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "ServiceName": "user-api",
+      "ReRoutesCaseSensitive": false
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Admin/",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/Admin/",
+      "UpstreamHttpMethod": [ "POST" ],
+      "ServiceName": "user-api",
+      "ReRoutesCaseSensitive": false
+    },
+    {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/Training/",
       "DownstreamScheme": "http",
       "UpstreamPathTemplate": "/Training/",
@@ -79,6 +106,24 @@
       "UpstreamPathTemplate": "/Training/{catchAll}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
       "ServiceName": "training-api",
+      "ReRoutesCaseSensitive": false
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Search/",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/Search/",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "ServiceName": "search-api",
+      "ReRoutesCaseSensitive": false
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Search/{catchAll}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/Search/{catchAll}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "ServiceName": "search-api",
       "ReRoutesCaseSensitive": false
     }
   ],

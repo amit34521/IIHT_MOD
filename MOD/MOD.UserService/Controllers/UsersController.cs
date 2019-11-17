@@ -67,14 +67,15 @@ namespace MOD.UserService.Controllers
             _usersRepository.DeleteUsers(id);
         }
 
-        [HttpGet("Mentors")]
+        [Route("/api/Mentors")]
+        [HttpGet]
         public ActionResult<string> GetMentors()
         {
             return Ok(_usersRepository.GetMentors());
         }
 
-        // GET: api/Users/5
-        [HttpGet("Mentors/{id:long:min(1)}")]
+        [Route("/api/Mentors/{id:long:min(1)}")]
+        [HttpGet]
         public ActionResult<string> GetMentorById(long id)
         {
             var userDetail = _usersRepository.GetMentorById(id);
@@ -83,7 +84,8 @@ namespace MOD.UserService.Controllers
             return Ok(userDetail);
         }
 
-        [HttpGet("Mentors/{name}")]
+        [Route("/api/Mentors/{name}")]
+        [HttpGet]
         public ActionResult<string> CheckMentors(string name)
         {
             var result = _usersRepository.CheckMentorAvailability(name);
@@ -92,28 +94,29 @@ namespace MOD.UserService.Controllers
             return Ok(result);
         }
 
-        // POST: api/Users
-        [HttpPost("Mentors")]
-        public void AddMentor([FromBody] Mentor user)
+        [Route("api/Mentors")]
+        [HttpPost]
+        public void AddMentor([FromBody] Mentor mentor)
         {
-            _usersRepository.AddMentors(user);
+            _usersRepository.AddMentors(mentor);
         }
 
-        // PUT: api/Users/5
-        [HttpPut("Mentors")]
+        [Route("api/Mentors")]
+        [HttpPut]
         public void UpdateMentor([FromBody] Mentor user)
         {
             _usersRepository.UpdateMentors(user);
         }
 
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("Mentors/{id}")]
+        [Route("api/Mentors/{id:long:min(1)}")]
+        [HttpDelete]
         public void DeleteMentor(long id)
         {
             _usersRepository.DeleteMentors(id);
         }
 
-        [HttpPost("Mentors")]
+        [Route("api/Admin")]
+        [HttpPost]
         public void AddAdmin([FromBody] Admin admin)
         {
             _usersRepository.AddAdmin(admin);
