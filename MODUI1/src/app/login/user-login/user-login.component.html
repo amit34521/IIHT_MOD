@@ -1,0 +1,15 @@
+<div class="text-center ui form mt-3 container" style="max-width: 40rem;">
+    <form class="text-center border border-light p-5" #form="ngForm">
+        <p class="h4 mb-4">Sign in</p>
+        <input type="text" id="userName" name="userName" class="form-control mb-4" placeholder="User Name"
+         required [(ngModel)]="user.userName">
+        <input type="password" id="password" name="password" class="form-control mb-4" placeholder="Password" required
+        [(ngModel)]="user.password">
+        <div class="d-flex justify-content-around">
+            <div>
+                <a href="">Forgot password?</a>
+            </div>
+        </div>
+        <button color="info" block="true" class="btn btn-primary my-4" type="submit">Sign in</button>
+    </form>
+</div>
