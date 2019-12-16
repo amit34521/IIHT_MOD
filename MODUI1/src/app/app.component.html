@@ -174,13 +174,13 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            Dropdown
+            Login
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">User</a>
+            <a class="dropdown-item" href="#">Mentor</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Admin</a>
           </div>
         </li>
         <li class="nav-item">
@@ -188,8 +188,28 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="fas fa-user"></span> Sign Up </a></li>&nbsp;&nbsp;&nbsp;
-        <li><a href="#"><span class="fas fa-sign-in-alt"></span> Login</a></li>
+        <li>
+          <a class="nav-link dropdown-toggle" href="#" id="signupBarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="fas fa-user"></span> Sign Up</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="signupBarDropdown">
+            <a routerLink="/usersignup" routerLinkActive="active" class="dropdown-item" href="#">User</a>
+            <a class="dropdown-item" href="#">Mentor</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Admin</a>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link dropdown-toggle" href="#" id="loginBarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="fas fa-sign-in-alt"></span> Login</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="loginBarDropdown">
+            <a routerLink="/usersignup" routerLinkActive="active" class="dropdown-item" href="#">User</a>
+            <a class="dropdown-item" href="#">Mentor</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Admin</a>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
@@ -308,51 +328,51 @@
 </div>
 
 <div *ngIf="loginType == 'user'">
-    <nav class="navbar navbar-expand-lg navbar-darl bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  <nav class="navbar navbar-expand-lg navbar-darl bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Trainings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Payments</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+      <div class="navbar-right">
+        <ul class="navbar-nav">
+          <li>
+            <a class="nav-link" href="#"><span class="fas fa-user-edit"></span> Edit Profile </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Trainings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Payments</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+          <li class="nav-item justify">
+            <a href="#"><span class="fas fa-sign-out-alt"></span> Logout </a>
           </li>
         </ul>
-        <div class="navbar-right">
-          <ul class="navbar-nav">
-            <li>
-              <a class="nav-link" href="#"><span class="fas fa-user-edit"></span> Edit Profile </a>
-            </li>
-            <li class="nav-item justify">
-              <a href="#"><span class="fas fa-sign-out-alt"></span> Logout </a>
-            </li>
-          </ul>
-        </div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
+</div>
 
 <div>
   <router-outlet></router-outlet>
